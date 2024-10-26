@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional College Admission Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f4f7fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 600px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-in-out;
+            border: 2px solid #004080; /* Adding border color */
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #004080;
+            font-size: 26px;
+        }
+
+        h2 {
+            color: #004080;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #004080; /* Added bottom border */
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            max-width: 100%; /* Shortened width for compactness */
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #004080;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 64, 128, 0.5);
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .radio-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #004080;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #002e66;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        textarea {
+            resize: none;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #004080;
+        }
+
+        /* Specific adjustments */
+        .address-field {
+            width: 100%; /* Increase address input width */
+            max-width: 100%;
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #004080;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>College Admission Form</h1>
+        
+        <form>
+            <h2>Personal Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">First Name:</label>
+                        <input type="text" maxlength="25" placeholder="First Name" required style="width:70%;">
+                    </td>
+                    <td>
+                        <label class="section-title">Last Name:</label>
+                        <input type="text" maxlength="25" placeholder="Last Name" required style="width:70%;">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label class="section-title">Birth Date:</label>
+                        <input type="date" required style="width:70%;">
+                    </td>
+                    <td>
+                        <label class="section-title">Gender:</label>
+                        <div class="radio-inline">
+                            <input type="radio" name="Gender" required> <label>Male</label>
+                            <input type="radio" name="Gender"> <label>Female</label>
+                            <input type="radio" name="Gender"> <label>Others</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Nationality:</label>
+                        <input type="text" maxlength="25" placeholder="Nationality" required style="width:70%;">
+                    </td>
+                    <td>
+                        <label class="section-title">Age:</label>
+                        <input type="number" min="1" max="100" placeholder="Age" required style="width:30%;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label class="section-title">Address:</label>
+                        <textarea class="address-field" rows="3" placeholder="Your Address" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label class="section-title">Hobbies:</label>
+                        <input type="text" maxlength="50" placeholder="List your hobbies">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Upload Photo:</label>
+                        <input type="file" accept="image/*" required>
+                    </td>
+                    <td>
+                        <label class="section-title">Preferred Course:</label>
+                        <input type="text" maxlength="50" placeholder="Course Name" required>
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Academic Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">Highest Qualification:</label>
+                        <select required>
+                            <option disabled selected>Select Qualification</option>
+                            <option>High School</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label class="section-title">Previous School:</label>
+                        <input type="text" maxlength="50" placeholder="Previous School" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="section-title">Percentage/Grade:</label>
+                        <input type="text" maxlength="5" placeholder="Percentage/Grade" required>
+                    </td>
+                    <td>
+                        <label class="section-title">Upload Marksheet:</label>
+                        <input type="file" accept=".pdf,.jpg,.png" required>
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Contact Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">Country:</label>
+                        <select required>
+                            <option disabled selected>Select Country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label class="section-title">State:</label>
+                        <select required>
+                            <option disabled selected>Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Telangana</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Email:</label>
+                        <input type="email" placeholder="Your Email" required style="width: 80%;">
+                    </td>
+                    <td>
+                        <label class="section-title">Phone:</label>
+                        <input type="tel" maxlength="10" placeholder="Phone Number" required style="width:50%;">
+                    </td>
+                </tr>
+                
+            </table>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html
