@@ -1,0 +1,31 @@
+<!--5. JavaScript Program to Find the Largest Among Three Numbers-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+          function check(){
+            var a =parseFloat(document.getElementById("a").value);
+            var b =parseFloat(document.getElementById("b").value);
+            var c =parseFloat(document.getElementById("c").value);
+            if(a>b && a>c){
+            document.getElementById("res").innerHTML=a+ " is bigger";       
+          }
+          else if(b>a && b>c){
+            document.getElementById("res").innerHTML=b+ " is bigger";       
+          }
+          
+          else {
+            document.getElementById("res").innerHTML=c+ " is bigger";       
+          }}
+    </script>
+</head>
+<body>
+     Enter number a :<input type="number" id="a">
+     Enter number b :<input type="number" id="b">
+     Enter number c :<input type="number" id="c">
+     <button  onclick="check()">Find Bigger</button><br>
+     <p id="res"></p>
+</body>
+</html>

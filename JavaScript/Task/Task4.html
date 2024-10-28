@@ -1,0 +1,29 @@
+<!--4 JavaScript Program to Check if a Number is Odd or Even -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+          function check(){
+            var a =parseInt(document.getElementById("a").value);
+            if(a%2==0){
+                document.getElementById("res").innerHTML=a+" is even"
+            }
+            else if(a%2!=0){
+                document.getElementById("res").innerHTML=a+" is odd";
+            }
+            else{
+              document.getElementById("res").innerHTML=a+" is not a vaild number";
+            }
+                   
+          }
+    </script>
+</head>
+<body>
+    <h1>Check Even or odd</h1>
+     Enter number :<input type="number" id="a">
+     <button value="check" onclick="check()">Check Even or Odd</button><br>
+     <span id="res"></span>
+</body>
+</html>
