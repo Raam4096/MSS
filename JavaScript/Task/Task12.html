@@ -1,0 +1,29 @@
+<!--12. JavaScript Program to Check Whether a String is Palindrome or Not -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Palindrome(){
+            var s=document.getElementById("st").value;
+            var s2="";
+            for(let i=s.length-1;i>=0;i--){
+                s2+=s[i];
+            }
+            if(s==(s2)){
+                document.getElementById("res").innerHTML=s+" is a palindrome";
+            }
+            else{
+                document.getElementById("res").innerHTML=s+" is not a palindrome";
+                        } 
+                               }
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Palindrome</h1>
+    Enter a String : <input type="text" id="st">
+    <button onclick="Palindrome()">Check Palindrome</button>
+    <p id="res"></p>
+</body>
+</html>

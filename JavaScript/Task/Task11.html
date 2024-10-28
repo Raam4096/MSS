@@ -1,0 +1,25 @@
+<!--11. JavaScript Program to Find the Sum of Natural Numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function findsum(){
+            var n=parseFloat(document.getElementById("num").value);
+            var sum=0;
+            for(let i=1;i<=n;i++){
+                sum+=i;
+            }
+            document.getElementById("res").innerHTML="sum is "+sum
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Sum of Natural Numbers
+    </h1>
+  enter a number to find the sum of n natural numbers : <input type="number" id="num">
+  <button onclick="findsum()">Find Sum</button>
+  <p id="res"></p>
+</body>
+</html>
