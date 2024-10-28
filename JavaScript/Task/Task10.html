@@ -1,0 +1,31 @@
+<!--10. JavaScript Program to Check Armstrong Number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function Armstrong(){
+            var num=parseInt(document.getElementById("num").value);
+            var s1=num;
+            var sum=0;
+            while(num>0){
+                var res=parseInt(num%10);
+                sum=sum+res**3;
+                num=parseInt(num/10);
+            }
+            if(sum==s1){
+                document.getElementById("res").innerHTML=s1+" Is a Armstrong number";
+            }
+            else{
+                document.getElementById("res").innerHTML=s1+" Is Not a Armstrong number";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Check Armstrong or not</h1>
+    Enter a number:<input type="text" id="num">
+    <button onclick="Armstrong()">Check Armstrong</button>
+    <p id="res"></p>
+</body>
+</html> 

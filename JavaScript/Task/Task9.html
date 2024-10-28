@@ -1,0 +1,23 @@
+<!--9. JavaScript Program to Display the Multiplication Table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function MultiplicationTable(){
+            var num=parseInt(document.getElementById("num").value);
+        
+            for(let i=1;i<=10;i++){
+                var mul=i*num;
+                document.getElementById("res").innerHTML += num +" x "+i+" = "+mul+"<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    Enter A Number To Get Multiplication Table:<input type="text" id="num">
+    <button onclick="MultiplicationTable()">Multiplication Table</button>
+    <p id="res"></p>
+</body>
+</html>

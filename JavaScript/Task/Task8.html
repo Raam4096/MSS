@@ -1,0 +1,23 @@
+<!--8. JavaScript Program to Find the Factorial of a Number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function Factorial(){
+            var num=parseInt(document.getElementById("num").value);
+            var mul=1;
+            for(let i=1;i<num;i++){
+                mul+=mul*i;
+            }
+            document.getElementById("res").innerHTML=mul;
+        }
+    </script>
+</head>
+<body>
+    <h1>Factorial Of A Number</h1>
+    Enter a number:<input type="text" id="num">
+    <button onclick="Factorial()">Check Factorial</button>
+    <p id="res"></p>
+</body>
+</html>
