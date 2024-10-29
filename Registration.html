@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional College Admission Form</title>
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <div class="container">
+        <h1>College Admission Form</h1>
+        <form id="admissionForm" target="_blank" action="">
+            <h2>Personal Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">First Name:</label>
+                        <input type="text" maxlength="15" id="fname" placeholder="First Name" style="width:70%;">
+                        <p id="fname_err" style="color: red; display: none; font-size:10px; margin-top:2px; padding-left:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Last Name:</label>
+                        <input type="text" maxlength="15" id="lname" placeholder="Last Name" style="width:70%;">
+                        <p id="lname_err" style="color: red; display: none; font-size:10px; margin-top:2px; padding-left:10px;"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Birth Date:</label>
+                        <input type="date" id="dob" style="width:70%;">
+                        <p id="dob_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Gender:</label>
+                        <div class="radio-inline">
+                            <input type="radio" name="gender" id="male" value="Male"> <label>Male</label>
+                            <input type="radio" name="gender" id="female" value="Female"> <label>Female</label>
+                            <input type="radio" name="gender" id="others" value="Others"> <label>Others</label>
+                        </div>
+                        <p id="gender_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Nationality:</label>
+                        <input type="text" id="nationality" maxlength="25" placeholder="Nationality" style="width:70%;">
+                        <p id="nationality_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Age:</label>
+                        <input type="number" id="age" min="1" max="100" placeholder="Age" style="width:30%;">
+                        <p id="age_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label class="section-title">Address:</label>
+                        <textarea id="address" rows="3" placeholder="Your Address" style="width:95%;"></textarea>
+                        <p id="address_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Upload Photo:</label>
+                        <input type="file" id="photo" accept="image/*">
+                        <p id="photo_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Preferred Course:</label>
+                        <input type="text" id="course" maxlength="50" placeholder="Course Name" style="width:70%;">
+                        <p id="course_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Academic Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">Highest Qualification:</label>
+                        <select id="qualification">
+                            <option disabled selected>Select Qualification</option>
+                            <option>High School</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                        </select>
+                        <p id="qualification_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Previous School:</label>
+                        <input type="text" id="school" maxlength="50" placeholder="Previous School" style="width:70%;">
+                        <p id="school_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="section-title">Percentage/Grade:</label>
+                        <input type="text" id="grade" maxlength="5" placeholder="Percentage/Grade">
+                        <p id="grade_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Upload Marksheet:</label>
+                        <input type="file" id="marksheet" accept=".pdf,.jpg,.png">
+                        <p id="marksheet_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Contact Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">Email:</label>
+                        <input type="email" id="email" placeholder="Your Email" style="width:80%;">
+                        <p id="email_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Phone:</label>
+                        <input type="tel" id="phone"  placeholder="Phone Number" style="width:50%;">
+                        <p id="phone_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+            </table>
+            <h2>Set Password</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label class="section-title">Password :</label>
+                        <input type="password" id="password" placeholder="Your Password" style="width:80%;">
+                        <p id="password_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                    <td>
+                        <label class="section-title">Confirm Password:</label>
+                        <input type="password" id="conpassword"  placeholder="Confirm Your Password" style="width:70%;">
+                        <p id="conpassword_err" style="color: red; display: none; font-size:10px;"></p>
+                    </td>
+                </tr>
+            </table>
+
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+   <div></div>
+
+    <script src="Registration.js"></script>
+</body>
+</html>

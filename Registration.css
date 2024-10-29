@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f4f7fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.container {
+    width: 600px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+    border: 2px solid #004080; /* Adding border color */
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+    font-size: 26px;
+}
+
+h2 {
+    color: #004080;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #004080; /* Added bottom border */
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    max-width: 100%; /* Shortened width for compactness */
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #004080;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 64, 128, 0.5);
+}
+
+td {
+    vertical-align: middle;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004080;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #002e66;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+textarea {
+    resize: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #004080;
+}
+
+/* Specific adjustments */
+.address-field {
+    width: 100%; /* Increase address input width */
+    max-width: 100%;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004080;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

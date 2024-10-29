@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+</head>
+<body>
+    <h1>Form Submitted Successfully! </h1>
+    <div id="formData"></div>
+
+    <script>
+       
+        const query = window.location.search.substring(1); 
+        let content = '<ul>';
+
+        for (let i = 0; i < pairs.length; i++) {
+            const [key, value] = pairs[i].split('='); 
+            content += `<li><strong>${key}:</strong> ${decodeURIComponent(value)}</li>`;
+        }
+
+        content += '</ul>';
+        document.getElementById('formData').innerHTML = content;
+    </script>
+</body>
+</html>
